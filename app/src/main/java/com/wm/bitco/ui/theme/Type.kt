@@ -11,16 +11,16 @@ import com.wm.bitco.R
 
 // Set of Material typography styles to start with
 val InerFamily =  FontFamily(
-    Font(R.font.inter_black),
-    Font(R.font.inter_bold),
-    Font(R.font.inter_extra_light),
-    Font(R.font.inter_light),
-    Font(R.font.inter_medium),
-    Font(R.font.inter_regular),
+    Font(R.font.inter_black, FontWeight.Normal),
+    Font(R.font.inter_bold,FontWeight.Bold),
+    Font(R.font.inter_extra_light, FontWeight.ExtraLight),
+    Font(R.font.inter_light,FontWeight.Light),
+    Font(R.font.inter_medium,FontWeight.Medium),
+    Font(R.font.inter_regular,FontWeight.SemiBold),
 )
 
 val Typography = Typography(
-    body1 = TextStyle(
+     body1= TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
@@ -32,6 +32,7 @@ val Typography = Typography(
         fontSize = 22.sp
 
     )
+
 
     /* Other default text styles to override
     button = TextStyle(
