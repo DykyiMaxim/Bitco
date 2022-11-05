@@ -172,10 +172,13 @@ fun SignUpForm(){
         Spacer(modifier = Modifier.padding(16.dp))
         Button(onClick = {
            val user = UserRegForm(
+               email = email.text,
                 name = name.text ,
-                email = email.text,
                 password = password.text
             )
+
+
+
         },
             Modifier
                 .width(290.dp)
@@ -192,7 +195,7 @@ fun SignUpForm(){
         Row(verticalAlignment = Alignment.CenterVertically) {
             
         }
-        Text(text = "Don’t have an account? ", fontFamily = InerFamily, fontWeight = FontWeight.Light, color = Color.White,fontSize = 14.sp)
+        Text(text = "Already have an account? ", fontFamily = InerFamily, fontWeight = FontWeight.Light, color = Color.White,fontSize = 14.sp)
         ClickableText(text = AnnotatedString("Login"), onClick = {Log.e("TAG","HEHE")},style=TextStyle(fontFamily = InerFamily, fontWeight = FontWeight.Light, color = Color.Cyan,fontSize = 14.sp))
     }
 }
