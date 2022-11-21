@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.wm.bitco.presentation.MainViewModel
+import com.wm.bitco.presentation.Reg_screen.RegistrationViewModel
 import com.wm.bitco.ui.SignUpForm
 import com.wm.bitco.ui.theme.BitcoTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,16 +24,16 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private val viewModel:MainViewModel by viewModels()
+    private val RegviewModel:RegistrationViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
 
-            SignUpForm()
+            SignUpForm(RegviewModel)
 
 
         }
-        viewModel.regUser()
 
 
     }

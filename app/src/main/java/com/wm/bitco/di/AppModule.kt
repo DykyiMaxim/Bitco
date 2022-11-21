@@ -24,7 +24,7 @@ object AppModule {
             .addInterceptor(logging)
             .build()
         return Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl("https://bitco-back.herokuapp.com/")
             .addConverterFactory(MoshiConverterFactory.create())
             .client(okCl)
             .build()
