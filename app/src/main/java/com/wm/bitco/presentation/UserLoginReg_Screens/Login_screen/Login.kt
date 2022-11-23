@@ -11,11 +11,11 @@ import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.input.key.Key.Companion.R
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.AnnotatedString
@@ -54,9 +54,11 @@ fun LoginForm(){
             Spacer(modifier = Modifier.padding(20.dp))
 
             Image(modifier = Modifier,imageVector = ImageVector.vectorResource(id = R.drawable.logo), contentDescription = "logo")
-            Spacer(modifier = Modifier.padding(16.dp))
-            Text(text = "Login",fontFamily = InerFamily, fontWeight = FontWeight.Bold, color = DarkPurple,fontSize = 22.sp)
+            Spacer(modifier = Modifier.padding(8.dp))
+            Text(text = "Welcome to Bitco",fontFamily = InerFamily, fontWeight = FontWeight.Bold, color = DarkPurple,fontSize = 22.sp)
             Spacer(modifier = Modifier.padding(6.dp))
+            Text(text = "Your personal crypto manager",fontFamily = InerFamily, fontWeight = FontWeight.Normal, color = Color.White,fontSize = 15.sp)
+            Spacer(modifier = Modifier.padding(12.dp))
 
        OutlinedTextField(
             value = email,
@@ -148,9 +150,9 @@ fun LoginForm(){
             )
 
         ){
-            Text(text = "Get Started",fontFamily = InerFamily, fontWeight = FontWeight.Bold, color = Color.White,fontSize = 16.sp)
+            Text(text = "Login",fontFamily = InerFamily, fontWeight = FontWeight.Bold, color = Color.White,fontSize = 16.sp)
         }
-        Spacer(modifier = Modifier.padding(100.dp))
+        Spacer(modifier = Modifier.padding(8.dp))
         Row(verticalAlignment = Alignment.CenterVertically) {
             
         }
