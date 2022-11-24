@@ -25,17 +25,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.viewModelScope
 import com.wm.bitco.R
 import com.wm.bitco.domain.models.UserRegForm
-import com.wm.bitco.presentation.Reg_screen.RegistrationViewModel
+import com.wm.bitco.presentation.UserLoginReg_Screens.RegistrationLoginViewModel
 import com.wm.bitco.ui.theme.*
 
 var field = mutableListOf<Unit>()
 @Composable
 @Preview
 fun SignUpForm(
-    viewModel:RegistrationViewModel  = hiltViewModel()
+    viewModel: RegistrationLoginViewModel = hiltViewModel()
 ){
     var name by remember { mutableStateOf(TextFieldValue("")) }
     var email by remember { mutableStateOf(TextFieldValue("")) }

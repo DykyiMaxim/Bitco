@@ -1,4 +1,5 @@
 package com.wm.bitco.presentation.UserLoginReg_Screens
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.wm.bitco.domain.models.UserRegForm
@@ -17,10 +18,13 @@ class RegistrationLoginViewModel @Inject constructor(
         form:UserRegForm
     ){
         viewModelScope.launch {
-            repository
+            val res = repository
                 .register_user(form.email,form.name, form.password)
 
             //Todo: Make normal check for request
+
+            Log.d("TAG", res.data.toString())
+            Log.d("TAG", res.message.toString())
 
         }
 
